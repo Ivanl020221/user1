@@ -23,5 +23,38 @@ namespace SalaryV1.Utilites
         {
             InitializeComponent();
         }
+
+        private void SetTitle(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+            if (sender is Page page)
+            {
+                this.Title = $"Распределение зарплат - {page.Title}";
+            }
+        }
+
+        private void ExitThis(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.
+                Show(
+                "Вы уверены, " +
+                "что хотите выйти?",
+                "Выход",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question) ==
+                MessageBoxResult.Yes)
+            {
+                Main main = new Main();
+                main.Show();
+                this.Close();
+            }
+        }
+
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
     }
 }

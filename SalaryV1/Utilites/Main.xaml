@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SalaryV1.Utilites"
         mc:Ignorable="d"
-        Title="Main" Height="650" Width="800">
+        Title="Распределение зарплат - " Height="650" Width="800">
+    <Window.Resources>
+        <Style TargetType="MenuItem" x:Key="NoNavigate">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=MainFrame, Path=CanGoBack}" Value="False">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Назад" Click="GoBack" Style="{StaticResource NoNavigate}"/>
+            <MenuItem Header="Выход" Background="#FFFFF6A5" Click="ExitThis" Style="{StaticResource NoNavigate}"/>
+        </Menu>
+        <Image Grid.Row="1" Source="/SalaryV1;component/Resourses/logo.png">
+        </Image>
+        <Frame x:Name="MainFrame" Grid.Row="2" Navigated="SetTitle" Source="/SalaryV1;component/Users/AllUsers/Auth.xaml" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>
