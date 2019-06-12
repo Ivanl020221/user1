@@ -36,5 +36,17 @@ namespace SalaryV1.Users.Manager.Main
                 MessageBox.Show(ex.Message, ex.HelpLink, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void GoToTaskList(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                NavigationService.Navigate(new Tast.TaskList());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.HelpLink, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

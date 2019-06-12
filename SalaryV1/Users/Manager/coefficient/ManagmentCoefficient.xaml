@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:SalaryV1.Users.Manager.coefficient"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ManagmentCoefficient">
+      Title="Упровление коэффичентами">
 
     <Grid>
         <Grid.RowDefinitions>

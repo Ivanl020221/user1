@@ -22,5 +22,13 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" Click="GoTocoefficient">Управление коэффицентами</Button>
         </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Click="GoToTaskList">Список задач</Button>
+        </Grid>
     </Grid>
 </Page>

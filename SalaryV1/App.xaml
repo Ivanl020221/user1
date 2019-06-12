@@ -79,7 +79,7 @@
             <Setter Property="FontSize" Value="10"></Setter>
             <Setter Property="FontFamily" Value="Candara"></Setter>
             <Setter Property="Foreground" Value="#FF243238"></Setter>
-
+            <Setter Property="Margin" Value="5"></Setter>
 
             <Setter Property="Height" Value="30"></Setter>
         </Style>
