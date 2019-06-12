@@ -84,6 +84,9 @@
     <Compile Include="Users\Executor\Main\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Users\Manager\coefficient\ManagmentCoefficient.xaml.cs">
+      <DependentUpon>ManagmentCoefficient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Users\Manager\Main\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Users\Executor\Main\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Users\Manager\coefficient\ManagmentCoefficient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

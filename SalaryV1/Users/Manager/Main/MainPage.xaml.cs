@@ -27,7 +27,14 @@ namespace SalaryV1.Users.Manager.Main
 
         private void GoTocoefficient(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                NavigationService.Navigate(new coefficient.ManagmentCoefficient());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.HelpLink, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
